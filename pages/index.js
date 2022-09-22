@@ -30,7 +30,7 @@ import * as source from 'src/views/components/swiper/SwiperSourceCode'
 import { useSettings } from 'src/@core/hooks/useSettings'
 export default function Home() {
    // ** Hook
-   const {
+  const {
     settings: { direction }
   } = useSettings()
   return (

@@ -157,7 +157,6 @@ const HorizontalNavGroup = props => {
   }
 
   return (
-    <CanViewNavGroup navGroup={item}>
       <MainWrapper {...(WrapperCondition ? { onClickAway: handleGroupClose } : { onMouseLeave: handleGroupClose })}>
         <ChildWrapper>
           <List component='div' sx={{ py: skin === 'bordered' ? 2.625 : 2.75 }}>
@@ -257,7 +256,6 @@ const HorizontalNavGroup = props => {
           </List>
         </ChildWrapper>
       </MainWrapper>
-    </CanViewNavGroup>
   )
 }
 

@@ -70,6 +70,7 @@ const FAQ = ({ apiData }) => {
 export const getStaticProps = async () => {
   const res = await axios.get('/pages/faqs')
   const apiData = res.data
+  
 
   return {
     props: {
