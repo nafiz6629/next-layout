@@ -1,8 +1,38 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-
+// ** MUI Imports
+import Grid from '@mui/material/Grid'
+import Link from '@mui/material/Link'
+import Typography from '@mui/material/Typography'
+// ** Custom Components Imports
+import PageHeader from 'src/@core/components/page-header'
+import CardSnippet from 'src/@core/components/card-snippet'
+// ** Styled Component Import
+import KeenSliderWrapper from 'src/@core/styles/libs/keen-slider'
+// ** Demo Components Imports
+import SwiperLoop from 'src/views/components/swiper/SwiperLoop'
+import SwiperZoom from 'src/views/components/swiper/SwiperZoom'
+import SwiperFader from 'src/views/components/swiper/SwiperFader'
+import SwiperDefault from 'src/views/components/swiper/SwiperDefault'
+import SwiperSpacing from 'src/views/components/swiper/SwiperSpacing'
+import SwiperFreeMode from 'src/views/components/swiper/SwiperFreeMode'
+import SwiperCentered from 'src/views/components/swiper/SwiperCentered'
+import SwiperVertical from 'src/views/components/swiper/SwiperVertical'
+import SwiperControls from 'src/views/components/swiper/SwiperControls'
+import SwiperThumbnails from 'src/views/components/swiper/SwiperThumbnails'
+import SwiperAutoSwitch from 'src/views/components/swiper/SwiperAutoSwitch'
+import SwiperMultipleSlides from 'src/views/components/swiper/SwiperMultipleSlides'
+import SwiperMutationObserver from 'src/views/components/swiper/SwiperMutationObserver'
+// ** Source code imports
+import * as source from 'src/views/components/swiper/SwiperSourceCode'
+// ** Hook Import
+import { useSettings } from 'src/@core/hooks/useSettings'
 export default function Home() {
+   // ** Hook
+   const {
+    settings: { direction }
+  } = useSettings()
   return (
     <div className={styles.container}>
       <Head>
@@ -11,59 +41,164 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
+      <KeenSliderWrapper>
+      <Grid container spacing={6} className='match-height'>
+        <PageHeader
+          subtitle={<Typography variant='body2'>Swiper is the most modern free mobile touch slider.</Typography>}
+          title={
+            <Typography variant='h5'>
+              <Link href='https://swiperjs.com/react' target='_blank'>
+                Swiper
+              </Link>
+            </Typography>
+          }
+        />
+        <Grid item xs={12}>
+          <CardSnippet
+            title='Default'
+            code={{
+              tsx: null,
+              jsx: source.SwiperDefaultJSXCode
+            }}
           >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
+            <SwiperDefault direction={direction} />
+          </CardSnippet>
+        </Grid>
+        <Grid item xs={12}>
+          <CardSnippet
+            title='Loop'
+            code={{
+              tsx: null,
+              jsx: source.SwiperLoopJSXCode
+            }}
           >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+            <SwiperLoop direction={direction} />
+          </CardSnippet>
+        </Grid>
+        <Grid item xs={12}>
+          <CardSnippet
+            title='Multiple Slides'
+            code={{
+              tsx: null,
+              jsx: source.SwiperMultipleSlidesJSXCode
+            }}
+          >
+            <SwiperMultipleSlides direction={direction} />
+          </CardSnippet>
+        </Grid>
+        <Grid item xs={12}>
+          <CardSnippet
+            title='Spacing'
+            code={{
+              tsx: null,
+              jsx: source.SwiperSpacingJSXCode
+            }}
+          >
+            <SwiperSpacing direction={direction} />
+          </CardSnippet>
+        </Grid>
+        <Grid item xs={12}>
+          <CardSnippet
+            title='FreeMode'
+            code={{
+              tsx: null,
+              jsx: source.SwiperFreeModeJSXCode
+            }}
+          >
+            <SwiperFreeMode direction={direction} />
+          </CardSnippet>
+        </Grid>
+        <Grid item xs={12}>
+          <CardSnippet
+            title='Centered'
+            code={{
+              tsx: null,
+              jsx: source.SwiperCenteredJSXCode
+            }}
+          >
+            <SwiperCentered direction={direction} />
+          </CardSnippet>
+        </Grid>
+        <Grid item xs={12}>
+          <CardSnippet
+            title='Vertical'
+            code={{
+              tsx: null,
+              jsx: source.SwiperVerticalJSXCode
+            }}
+          >
+            <SwiperVertical />
+          </CardSnippet>
+        </Grid>
+        <Grid item xs={12}>
+          <CardSnippet
+            title='Controls'
+            code={{
+              tsx: null,
+              jsx: source.SwiperControlsJSXCode
+            }}
+          >
+            <SwiperControls direction={direction} />
+          </CardSnippet>
+        </Grid>
+        <Grid item xs={12}>
+          <CardSnippet
+            title='Thumbnails'
+            code={{
+              tsx: null,
+              jsx: source.SwiperThumbnailsJSXCode
+            }}
+          >
+            <SwiperThumbnails direction={direction} />
+          </CardSnippet>
+        </Grid>
+        <Grid item xs={12}>
+          <CardSnippet
+            title='Fader'
+            code={{
+              tsx: null,
+              jsx: source.SwiperFaderJSXCode
+            }}
+          >
+            <SwiperFader direction={direction} />
+          </CardSnippet>
+        </Grid>
+        <Grid item xs={12}>
+          <CardSnippet
+            title='Zoom'
+            code={{
+              tsx: null,
+              jsx: source.SwiperZoomJSXCode
+            }}
+          >
+            <SwiperZoom direction={direction} />
+          </CardSnippet>
+        </Grid>
+        <Grid item xs={12}>
+          <CardSnippet
+            title='Auto Switch'
+            code={{
+              tsx: null,
+              jsx: source.SwiperAutoSwitchJSXCode
+            }}
+          >
+            <SwiperAutoSwitch direction={direction} />
+          </CardSnippet>
+        </Grid>
+        <Grid item xs={12}>
+          <CardSnippet
+            title='Mutation Observer'
+            code={{
+              tsx: null,
+              jsx: source.SwiperMutationObserverJSXCode
+            }}
+          >
+            <SwiperMutationObserver direction={direction} />
+          </CardSnippet>
+        </Grid>
+      </Grid>
+    </KeenSliderWrapper>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   )
 }

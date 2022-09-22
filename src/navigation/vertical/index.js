@@ -194,7 +194,7 @@ const navigation = () => {
         },
         {
           title: 'FAQ',
-          path: '/pages/faq'
+          path: '/faq'
         },
         {
           title: 'Knowledge Base',
