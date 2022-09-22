@@ -198,7 +198,7 @@ const navigation = () => {
         },
         {
           title: 'Knowledge Base',
-          path: '/pages/knowledge-base'
+          path: '/knowledge-base'
         },
         {
           title: 'Miscellaneous',
@@ -206,27 +206,27 @@ const navigation = () => {
             {
               openInNewTab: true,
               title: 'Coming Soon',
-              path: '/pages/misc/coming-soon'
+              path: '/misc/coming-soon'
             },
             {
               openInNewTab: true,
               title: 'Under Maintenance',
-              path: '/pages/misc/under-maintenance'
+              path: '/misc/under-maintenance'
             },
             {
               openInNewTab: true,
               title: 'Page Not Found - 404',
-              path: '/pages/misc/404-not-found'
+              path: '/misc/404-not-found'
             },
             {
               openInNewTab: true,
               title: 'Not Authorized - 401',
-              path: '/pages/misc/401-not-authorized'
+              path: '/misc/401-not-authorized'
             },
             {
               openInNewTab: true,
               title: 'Server Error - 500',
-              path: '/pages/misc/500-server-error'
+              path: '/misc/500-server-error'
             }
           ]
         }
