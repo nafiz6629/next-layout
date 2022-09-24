@@ -20,7 +20,8 @@ import PackageVariantClosed from 'mdi-material-ui/PackageVariantClosed'
 import GoogleCirclesExtended from 'mdi-material-ui/GoogleCirclesExtended'
 import CheckboxMarkedCircleOutline from 'mdi-material-ui/CheckboxMarkedCircleOutline'
 
-const navigation = () => {
+const 
+navigation = () => {
   return [
     {
       title: 'Dashboards',
@@ -123,17 +124,17 @@ const navigation = () => {
                 {
                   openInNewTab: true,
                   title: 'Login v1',
-                  path: '/pages/auth/login-v1'
+                  path: '/auth/login-v1'
                 },
                 {
                   openInNewTab: true,
                   title: 'Login v2',
-                  path: '/pages/auth/login-v2'
+                  path: '/auth/login-v2'
                 },
                 {
                   openInNewTab: true,
                   title: 'Login With AppBar',
-                  path: '/pages/auth/login-with-appbar'
+                  path: '/auth/login-with-appbar'
                 }
               ]
             },
@@ -143,12 +144,12 @@ const navigation = () => {
                 {
                   openInNewTab: true,
                   title: 'Register v1',
-                  path: '/pages/auth/register-v1'
+                  path: '/auth/register-v1'
                 },
                 {
                   openInNewTab: true,
                   title: 'Register v2',
-                  path: '/pages/auth/register-v2'
+                  path: '/auth/register-v2'
                 }
               ]
             },
@@ -158,12 +159,12 @@ const navigation = () => {
                 {
                   openInNewTab: true,
                   title: 'Forgot Password v1',
-                  path: '/pages/auth/forgot-password-v1'
+                  path: '/auth/forgot-password-v1'
                 },
                 {
                   openInNewTab: true,
                   title: 'Forgot Password v2',
-                  path: '/pages/auth/forgot-password-v2'
+                  path: '/auth/forgot-password-v2'
                 }
               ]
             },
@@ -173,12 +174,12 @@ const navigation = () => {
                 {
                   openInNewTab: true,
                   title: 'Reset Password v1',
-                  path: '/pages/auth/reset-password-v1'
+                  path: '/auth/reset-password-v1'
                 },
                 {
                   openInNewTab: true,
                   title: 'Reset Password v2',
-                  path: '/pages/auth/reset-password-v2'
+                  path: '/auth/reset-password-v2'
                 }
               ]
             }
@@ -186,7 +187,7 @@ const navigation = () => {
         },
         {
           title: 'Account Settings',
-          path: '/pages/account-settings'
+          path: '/account-settings'
         },
         {
           title: 'Pricing',
